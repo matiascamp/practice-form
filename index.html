@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de 3 pasos</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <div class="registro">
+      <!-- Paso 1 -->
+      <div id="paso-1" class="paso">
+        <h2 class="title">Register</h2>
+        <div class="cardBody">
+          <div class="inputContainer">
+            <label for="name" class="">Name</label>
+            <input type="text" id="nombre" placeholder="enter your name" required>
+          </div>
+          <div class="inputContainer">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="example@gmail.com" required>
+            <div id="error-email" class="error"></div>
+          </div>
+        </div>
+        <button id="next-1">Continue</button>
+        <div id="error-1" class="error"></div>
+      </div>
+
+      <!-- Paso 2 -->
+      <div id="paso-2" class="paso">
+        <h2 class="title">Which topics you are interested in?</h2>
+        <button id="option-1" class="btn">Software Development</button>
+        <button id="option-2" class="btn">User Experience</button>
+        <button id="option-3" class="btn">Graphic Design</button>
+        <button id="next-2">Siguiente</button>
+        <div id="error-2" class="error"></div>
+      </div>
+
+      <!-- Paso 3 -->
+      <div id="paso-3" class="paso">
+        <h2 class="title">Summary</h2>
+        <div class="profileData">
+          <div class="container-data-name">
+            <p style="color: #A1A1A9;font-size: 16px;">Name: </p>
+            <p id="data-name"></p>
+          </div>
+          <div class="container-data-email">
+            <p style="color: #A1A1A9;font-size: 16px;">Email: </p>
+            <p id="data-email"></p>
+          </div>
+        </div>
+        <div class="topicsData">
+          <p style="color: #A1A1A9;font-size: 16px;">Topics:</p>
+          <ul id="data-topics">
+
+          </ul>
+        </div>
+        <button id="submit">Confirm</button>
+      </div>
+    </div>
+    <div class="paginacion">
+      <span id="dotsText"></span>
+      <span class="dot active" data-step="1"></span>
+      <span class="dot" data-step="2"></span>
+      <span class="dot" data-step="3"></span>
+    </div>
+  </div>
+  <script src="./script.js"></script>
+</body>
+
+</html>

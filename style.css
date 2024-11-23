@@ -1,0 +1,202 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: radial-gradient(circle at 5% 5%,rgba(132, 94, 238, 0.3) 10%,transparent 30%), 
+  radial-gradient(circle at 95% 95%, rgba(66, 39, 176, 0.4)10%, transparent 30%),
+  #111725;
+  margin: 0;
+}
+
+.registro {
+  background-color: #212936;
+  padding: 40px;
+  border-radius: 8px;
+  width: 470px;
+  border: 1px solid #4D5562;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+}
+
+.paso {
+  display: none;
+}
+.cardBody {
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.paso.active {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.title {
+  color: #E5E7EB;
+  width: 100%;
+  font-size: 20px;
+}
+
+label {
+  width: 100%;
+  font-size: 12px;
+  color: #A1A1A9;
+  margin: 8px 0;
+  display: inline-block;
+}
+
+.inputContaienr {
+  position: relative;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #4D5562;
+  border-radius: 8px;
+  background-color: #212936;
+  color: #E5E7EB;
+  height: 50px;
+}
+
+input:focus {
+  outline: unset;
+  border: 2px solid #E5E7EB;
+}
+
+
+input::placeholder {
+  color: #4D5562;
+}
+
+#error-1 {
+  position: absolute;
+  bottom: -25px;
+}
+
+#error-email {
+  position: absolute;
+  padding-left: 5px;
+  padding-top: 5px;
+}
+
+button {
+  background: linear-gradient(90deg, #6a00ff, #8c1eff); 
+  color: white;
+  font-size: 16px; 
+  font-weight: 500; 
+  padding: 10px 20px;
+  border: none; 
+  cursor: pointer; 
+  transition: all 0.3s ease;
+  font-size: 12px;
+  font-weight: 700;
+  margin-top: 20px;
+  height: 40px;
+  width: 120px;
+  border-radius: 50px;
+}
+
+.btn.active {
+  background: linear-gradient(90deg, #6a00ff, #8c1eff) !important; 
+}
+
+#option-1, #option-2, #option-3 {
+  width: 100%;
+  border-radius: 16px;
+  height: 50px;
+  background: #394050;
+  font-size: 14px;
+  font-weight: 300;
+  text-align: start;
+  margin-top: 10px;
+}
+
+#paso-2 .title {
+  margin-bottom: 10px;
+}
+
+.profileData, .topicsData {
+  width: 100%;
+}
+
+.container-data-name, .container-data-email {
+  display: flex;
+}
+
+#data-topics li {
+  color: #E5E7EB;
+  font-weight: 550;
+  margin-left: 25px;
+  padding-top: 10px;
+}
+
+#data-topics::marker {
+  color: #E5E7EB;
+}
+
+#data-name, #data-email {
+  padding-left: 5px;
+  color: #E5E7EB;
+  font-weight: 550;
+}
+
+.error {
+  color: red;
+  font-size: 0.9em;
+}
+
+.paginacion {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+  padding-right: 100px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background-color: #4D5562;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: #652CD1;
+  box-shadow: 0 0 1px 5px rgba(132, 94, 238, 0.3);
+}
+
+.dot.visited {
+  background-color: #652CD1;
+}
+
+.dot:hover {
+  background-color: #652CD1;
+}
+
+#dotsText {
+  color: #4D5562; 
+  padding-right: 18px;
+  font-size: 12px;
+}
